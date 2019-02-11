@@ -1,34 +1,31 @@
-import {
-    BrowserRouter as Router,
-    Route,
-    Link
-} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import Main from './main/Main';
 import Manager from './manager/Manager';
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Content from './content/Content';
-class App extends Component {
+import './App.scss';
 
+class App extends Component {
   render() {
     return (
-        <Router>
-      <div className="App">
-        <header className="App-header">
+      <Router>
+        <div className="App">
+          <header className="App-header">
             <ul>
-                <li><Link to="/">Main</Link></li>
-                <li><Link to="/manager">Manager</Link></li>
+              <li>
+                <Link to="/">Main</Link>
+              </li>
+              <li>
+                <Link to="/manager">Manager</Link>
+              </li>
             </ul>
-        </header>
+          </header>
           <div>
-                      <Route exact path="/" component={Main}/>
-                      <Route exact path="/manager" component={Manager}/>
-
+            <Route exact path="/" component={Main} />
+            <Route exact path="/manager" component={Manager} />
           </div>
-      </div>
-        </Router>
+        </div>
+      </Router>
     );
   }
 }
