@@ -1,0 +1,17 @@
+.appMenu {
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+}
+
+.action-button{
+  margin-top: 15px;
+  border-width: thin;
+  p{
+    text-align: center;
+  }
+}
+.icon{
+  max-width: 50px;
+  max-height: 50px;
+}
